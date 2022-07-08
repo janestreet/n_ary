@@ -1,0 +1,1223 @@
+(library (name n_ary) (public_name n_ary) (libraries base)
+ (preprocess
+  (pps ppx_compare ppx_enumerate ppx_hash ppx_sexp_conv ppx_sexp_message)))
+
+(rule (targets jbuild)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets n_ary.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum2.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple2.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant2.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list2.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum3.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple3.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant3.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list3.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum4.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple4.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant4.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list4.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum5.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple5.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant5.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list5.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum6.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple6.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant6.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list6.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum7.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple7.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant7.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list7.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum8.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple8.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant8.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list8.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum9.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple9.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant9.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list9.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum10.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple10.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant10.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list10.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum11.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple11.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant11.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list11.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum12.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple12.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant12.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list12.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum13.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple13.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant13.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list13.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum14.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple14.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant14.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list14.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum15.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple15.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant15.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list15.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum16.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple16.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant16.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list16.mli)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum2.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple2.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant2.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list2.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum3.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple3.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant3.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list3.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum4.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple4.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant4.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list4.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum5.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple5.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant5.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list5.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum6.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple6.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant6.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list6.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum7.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple7.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant7.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list7.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum8.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple8.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant8.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list8.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum9.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple9.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant9.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list9.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum10.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple10.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant10.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list10.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum11.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple11.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant11.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list11.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum12.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple12.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant12.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list12.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum13.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple13.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant13.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list13.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum14.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple14.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant14.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list14.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum15.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple15.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant15.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list15.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets enum16.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets tuple16.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets variant16.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))
+
+(rule (targets list16.ml)
+ (deps ../gen/gen_n_ary.exe %{workspace_root}/bin/apply-style jbuild)
+ (action
+  (bash
+    "\
+   \n../gen/gen_n_ary.exe %{targets}\
+   \n%{workspace_root}/bin/apply-style %{targets} -directory-config jbuild -in-place\
+   \n"))
+ (mode fallback))

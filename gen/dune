@@ -1,0 +1,2 @@
+(executables (names gen_n_ary) (libraries base stdio)
+ (preprocess (pps ppx_enumerate ppx_string)))
