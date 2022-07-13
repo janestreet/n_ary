@@ -19,8 +19,6 @@ depends: [
   "ppx_jane"
   "ppx_sexp_conv"
   "ppx_sexp_message"
-  "ppx_string"
-  "stdio"
   "dune"                     {>= "2.0.0"}
 ]
 synopsis: "A library for N-ary datatypes and operations."
