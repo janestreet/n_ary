@@ -1,4 +1,5 @@
 opam-version: "2.0"
+version: "v0.16.0"
 maintainer: "Jane Street developers"
 authors: ["Jane Street Group, LLC"]
 homepage: "https://github.com/janestreet/n_ary"
@@ -10,15 +11,15 @@ build: [
   ["dune" "build" "-p" name "-j" jobs]
 ]
 depends: [
-  "ocaml" {>= "4.14.0"}
-  "base"
-  "expect_test_helpers_core"
-  "ppx_compare"
-  "ppx_enumerate"
-  "ppx_hash"
-  "ppx_jane"
-  "ppx_sexp_conv"
-  "ppx_sexp_message"
+  "ocaml"                    {>= "4.14.0"}
+  "base"                     {>= "v0.16" & < "v0.17"}
+  "expect_test_helpers_core" {>= "v0.16" & < "v0.17"}
+  "ppx_compare"              {>= "v0.16" & < "v0.17"}
+  "ppx_enumerate"            {>= "v0.16" & < "v0.17"}
+  "ppx_hash"                 {>= "v0.16" & < "v0.17"}
+  "ppx_jane"                 {>= "v0.16" & < "v0.17"}
+  "ppx_sexp_conv"            {>= "v0.16" & < "v0.17"}
+  "ppx_sexp_message"         {>= "v0.16" & < "v0.17"}
   "dune"                     {>= "2.0.0"}
 ]
 available: arch != "arm32" & arch != "x86_32"
