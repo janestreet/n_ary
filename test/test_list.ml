@@ -75,7 +75,7 @@ let%expect_test _ =
   print_s
     [%sexp
       (unzip [ 3, 2, 1; 1, 7, 6; 4, 1, 1; 1, 8, 8; 5, 2, 0; 9, 8, 3 ]
-       : int list * int list * int list)];
+        : int list * int list * int list)];
   [%expect {|
     ((3 1 4 1 5 9)
      (2 7 1 8 2 8)
@@ -116,7 +116,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (Or_error.try_with (fun () -> zip_exn list1 list2 list3)
-         : (int * int * int) list Or_error.t)]
+          : (int * int * int) list Or_error.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -161,7 +161,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (map list1 list2 list3 ~f:print_return_triple
-         : (int * int * int) list List.Or_unequal_lengths.t)]
+          : (int * int * int) list List.Or_unequal_lengths.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -196,7 +196,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (Or_error.try_with (fun () -> map_exn list1 list2 list3 ~f:print_return_triple)
-         : (int * int * int) list Or_error.t)]
+          : (int * int * int) list Or_error.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -243,7 +243,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (mapi list1 list2 list3 ~f:print_return_itriple
-         : (int * int * int * int) list List.Or_unequal_lengths.t)]
+          : (int * int * int * int) list List.Or_unequal_lengths.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -278,7 +278,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (Or_error.try_with (fun () -> mapi_exn list1 list2 list3 ~f:print_return_itriple)
-         : (int * int * int * int) list Or_error.t)]
+          : (int * int * int * int) list Or_error.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -352,7 +352,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (Or_error.try_with (fun () -> iter_exn list1 list2 list3 ~f:print_triple)
-         : unit Or_error.t)]
+          : unit Or_error.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -420,7 +420,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (Or_error.try_with (fun () -> iteri_exn list1 list2 list3 ~f:print_itriple)
-         : unit Or_error.t)]
+          : unit Or_error.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
