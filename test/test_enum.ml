@@ -14,7 +14,8 @@ let%expect_test _ =
   [%expect {|
     (Case0 0)
     (Case1 1)
-    (Case2 2) |}]
+    (Case2 2)
+    |}]
 ;;
 
 let of_int = N_ary.Enum3.of_int
@@ -27,7 +28,8 @@ let%expect_test _ =
     (-1 ())
     (0 (Case0))
     (1 (Case1))
-    (2 (Case2)) |}]
+    (2 (Case2))
+    |}]
 ;;
 
 let of_int_exn = N_ary.Enum3.of_int_exn
@@ -42,7 +44,8 @@ let%expect_test _ =
     (0 (Ok Case0))
     (1 (Ok Case1))
     (2 (Ok Case2))
-    (3 (Error ("N_ary.Enum3.of_int_exn: invalid input" 3))) |}]
+    (3 (Error ("N_ary.Enum3.of_int_exn: invalid input" 3)))
+    |}]
 ;;
 
 let case0 = N_ary.Enum3.case0

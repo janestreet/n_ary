@@ -109,7 +109,8 @@ let%expect_test _ =
   [%expect {|
     ((Case0 11)
      (Case1 22)
-     (Case2 33)) |}]
+     (Case2 33))
+    |}]
 ;;
 
 let map_case0 = N_ary.Variant3.map_case0
@@ -122,7 +123,8 @@ let%expect_test _ =
   [%expect {|
     ((Case0 11)
      (Case1 2)
-     (Case2 3)) |}]
+     (Case2 3))
+    |}]
 ;;
 
 let map_case1 = N_ary.Variant3.map_case1
@@ -135,7 +137,8 @@ let%expect_test _ =
   [%expect {|
     ((Case0 1)
      (Case1 22)
-     (Case2 3)) |}]
+     (Case2 3))
+    |}]
 ;;
 
 let map_case2 = N_ary.Variant3.map_case2
@@ -148,5 +151,6 @@ let%expect_test _ =
   [%expect {|
     ((Case0 1)
      (Case1 2)
-     (Case2 23)) |}]
+     (Case2 23))
+    |}]
 ;;

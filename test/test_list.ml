@@ -14,7 +14,8 @@ let%expect_test _ =
   [%expect {|
     ((9 6 0)
      (8 4 1)
-     (p p p p)) |}]
+     (p p p p))
+    |}]
 ;;
 
 let partition_enumi = N_ary.List3.partition_enumi
@@ -30,7 +31,8 @@ let%expect_test _ =
   [%expect {|
     ((9 4)
      (8 6 1 0)
-     (p p p p)) |}]
+     (p p p p))
+    |}]
 ;;
 
 let partition_map = N_ary.List3.partition_map
@@ -48,7 +50,8 @@ let%expect_test _ =
   [%expect {|
     ((90 60 0)
      (85 45 15)
-     (p p p p)) |}]
+     (p p p p))
+    |}]
 ;;
 
 let partition_mapi = N_ary.List3.partition_mapi
@@ -66,7 +69,8 @@ let%expect_test _ =
   [%expect {|
     ((90 40)
      (85 65 15 5)
-     (p  p  p  p)) |}]
+     (p  p  p  p))
+    |}]
 ;;
 
 let unzip = N_ary.List3.unzip
@@ -79,7 +83,8 @@ let%expect_test _ =
   [%expect {|
     ((3 1 4 1 5 9)
      (2 7 1 8 2 8)
-     (1 6 1 8 0 3)) |}]
+     (1 6 1 8 0 3))
+    |}]
 ;;
 
 let zip = N_ary.List3.zip
@@ -106,7 +111,8 @@ let%expect_test _ =
       (4 1 1)
       (1 8 8)
       (5 2 0)
-      (9 8 3))) |}]
+      (9 8 3)))
+    |}]
 ;;
 
 let zip_exn = N_ary.List3.zip_exn
@@ -135,7 +141,8 @@ let%expect_test _ =
       (4 1 1)
       (1 8 8)
       (5 2 0)
-      (9 8 3))) |}]
+      (9 8 3)))
+    |}]
 ;;
 
 let print_triple x y z = print_s [%message "" ~_:(x : int) ~_:(y : int) ~_:(z : int)]
@@ -186,7 +193,8 @@ let%expect_test _ =
       (4 1 1)
       (1 8 8)
       (5 2 0)
-      (9 8 3))) |}]
+      (9 8 3)))
+    |}]
 ;;
 
 let map_exn = N_ary.List3.map_exn
@@ -205,19 +213,22 @@ let%expect_test _ =
     {|
     (1 1 1)
     (2 2 2)
-    (Error "N_ary.List3.map_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.map_exn: lists have unequal lengths")
+    |}];
   test [ 1; 2 ] [ 1; 2; 3 ] [ 1; 2 ];
   [%expect
     {|
     (1 1 1)
     (2 2 2)
-    (Error "N_ary.List3.map_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.map_exn: lists have unequal lengths")
+    |}];
   test [ 1; 2 ] [ 1; 2 ] [ 1; 2; 3 ];
   [%expect
     {|
     (1 1 1)
     (2 2 2)
-    (Error "N_ary.List3.map_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.map_exn: lists have unequal lengths")
+    |}];
   test [ 3; 1; 4; 1; 5; 9 ] [ 2; 7; 1; 8; 2; 8 ] [ 1; 6; 1; 8; 0; 3 ];
   [%expect
     {|
@@ -233,7 +244,8 @@ let%expect_test _ =
       (4 1 1)
       (1 8 8)
       (5 2 0)
-      (9 8 3))) |}]
+      (9 8 3)))
+    |}]
 ;;
 
 let mapi = N_ary.List3.mapi
@@ -268,7 +280,8 @@ let%expect_test _ =
       (2 4 1 1)
       (3 1 8 8)
       (4 5 2 0)
-      (5 9 8 3))) |}]
+      (5 9 8 3)))
+    |}]
 ;;
 
 let mapi_exn = N_ary.List3.mapi_exn
@@ -287,19 +300,22 @@ let%expect_test _ =
     {|
     (0 1 1 1)
     (1 2 2 2)
-    (Error "N_ary.List3.mapi_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.mapi_exn: lists have unequal lengths")
+    |}];
   test [ 1; 2 ] [ 1; 2; 3 ] [ 1; 2 ];
   [%expect
     {|
     (0 1 1 1)
     (1 2 2 2)
-    (Error "N_ary.List3.mapi_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.mapi_exn: lists have unequal lengths")
+    |}];
   test [ 1; 2 ] [ 1; 2 ] [ 1; 2; 3 ];
   [%expect
     {|
     (0 1 1 1)
     (1 2 2 2)
-    (Error "N_ary.List3.mapi_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.mapi_exn: lists have unequal lengths")
+    |}];
   test [ 3; 1; 4; 1; 5; 9 ] [ 2; 7; 1; 8; 2; 8 ] [ 1; 6; 1; 8; 0; 3 ];
   [%expect
     {|
@@ -315,7 +331,8 @@ let%expect_test _ =
       (2 4 1 1)
       (3 1 8 8)
       (4 5 2 0)
-      (5 9 8 3))) |}]
+      (5 9 8 3)))
+    |}]
 ;;
 
 let iter = N_ary.List3.iter
@@ -342,7 +359,8 @@ let%expect_test _ =
     (1 8 8)
     (5 2 0)
     (9 8 3)
-    (Ok ()) |}]
+    (Ok ())
+    |}]
 ;;
 
 let iter_exn = N_ary.List3.iter_exn
@@ -361,19 +379,22 @@ let%expect_test _ =
     {|
     (1 1 1)
     (2 2 2)
-    (Error "N_ary.List3.iter_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.iter_exn: lists have unequal lengths")
+    |}];
   test [ 1; 2 ] [ 1; 2; 3 ] [ 1; 2 ];
   [%expect
     {|
     (1 1 1)
     (2 2 2)
-    (Error "N_ary.List3.iter_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.iter_exn: lists have unequal lengths")
+    |}];
   test [ 1; 2 ] [ 1; 2 ] [ 1; 2; 3 ];
   [%expect
     {|
     (1 1 1)
     (2 2 2)
-    (Error "N_ary.List3.iter_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.iter_exn: lists have unequal lengths")
+    |}];
   test [ 3; 1; 4; 1; 5; 9 ] [ 2; 7; 1; 8; 2; 8 ] [ 1; 6; 1; 8; 0; 3 ];
   [%expect
     {|
@@ -383,7 +404,8 @@ let%expect_test _ =
     (1 8 8)
     (5 2 0)
     (9 8 3)
-    (Ok ()) |}]
+    (Ok ())
+    |}]
 ;;
 
 let iteri = N_ary.List3.iteri
@@ -410,7 +432,8 @@ let%expect_test _ =
     (3 1 8 8)
     (4 5 2 0)
     (5 9 8 3)
-    (Ok ()) |}]
+    (Ok ())
+    |}]
 ;;
 
 let iteri_exn = N_ary.List3.iteri_exn
@@ -429,19 +452,22 @@ let%expect_test _ =
     {|
     (0 1 1 1)
     (1 2 2 2)
-    (Error "N_ary.List3.iteri_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.iteri_exn: lists have unequal lengths")
+    |}];
   test [ 1; 2 ] [ 1; 2; 3 ] [ 1; 2 ];
   [%expect
     {|
     (0 1 1 1)
     (1 2 2 2)
-    (Error "N_ary.List3.iteri_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.iteri_exn: lists have unequal lengths")
+    |}];
   test [ 1; 2 ] [ 1; 2 ] [ 1; 2; 3 ];
   [%expect
     {|
     (0 1 1 1)
     (1 2 2 2)
-    (Error "N_ary.List3.iteri_exn: lists have unequal lengths") |}];
+    (Error "N_ary.List3.iteri_exn: lists have unequal lengths")
+    |}];
   test [ 3; 1; 4; 1; 5; 9 ] [ 2; 7; 1; 8; 2; 8 ] [ 1; 6; 1; 8; 0; 3 ];
   [%expect
     {|
@@ -451,7 +477,8 @@ let%expect_test _ =
     (3 1 8 8)
     (4 5 2 0)
     (5 9 8 3)
-    (Ok ()) |}]
+    (Ok ())
+    |}]
 ;;
 
 let check_equal_lengths = N_ary.List3.check_equal_lengths
@@ -470,6 +497,5 @@ let%expect_test _ =
   test [ 1; 2 ] [ 1; 2 ] [ 1; 2; 3 ];
   [%expect {| Unequal_lengths |}];
   test [ 3; 1; 4; 1; 5; 9 ] [ 2; 7; 1; 8; 2; 8 ] [ 1; 6; 1; 8; 0; 3 ];
-  [%expect {|
-    (Ok ()) |}]
+  [%expect {| (Ok ()) |}]
 ;;
