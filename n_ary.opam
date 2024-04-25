@@ -19,7 +19,7 @@ depends: [
   "ppx_jane"
   "ppx_sexp_conv"
   "ppx_sexp_message"
-  "dune"                     {>= "2.0.0"}
+  "dune"                     {>= "3.11.0"}
 ]
 available: arch != "arm32" & arch != "x86_32"
 synopsis: "A library for N-ary datatypes and operations."
