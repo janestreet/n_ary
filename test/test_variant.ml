@@ -105,8 +105,9 @@ let%expect_test _ =
       (List.map
          [ Case0 1; Case1 2; Case2 3 ]
          ~f:(map ~f0:(( + ) 10) ~f1:(( + ) 20) ~f2:(( + ) 30))
-        : (int, int, int) t list)];
-  [%expect {|
+       : (int, int, int) t list)];
+  [%expect
+    {|
     ((Case0 11)
      (Case1 22)
      (Case2 33))
@@ -119,8 +120,9 @@ let%expect_test _ =
   print_s
     [%sexp
       (List.map [ Case0 1; Case1 2; Case2 3 ] ~f:(map_case0 ~f:(( + ) 10))
-        : (int, int, int) t list)];
-  [%expect {|
+       : (int, int, int) t list)];
+  [%expect
+    {|
     ((Case0 11)
      (Case1 2)
      (Case2 3))
@@ -133,8 +135,9 @@ let%expect_test _ =
   print_s
     [%sexp
       (List.map [ Case0 1; Case1 2; Case2 3 ] ~f:(map_case1 ~f:(( + ) 20))
-        : (int, int, int) t list)];
-  [%expect {|
+       : (int, int, int) t list)];
+  [%expect
+    {|
     ((Case0 1)
      (Case1 22)
      (Case2 3))
@@ -147,8 +150,9 @@ let%expect_test _ =
   print_s
     [%sexp
       (List.map [ Case0 1; Case1 2; Case2 3 ] ~f:(map_case2 ~f:(( + ) 20))
-        : (int, int, int) t list)];
-  [%expect {|
+       : (int, int, int) t list)];
+  [%expect
+    {|
     ((Case0 1)
      (Case1 2)
      (Case2 23))
