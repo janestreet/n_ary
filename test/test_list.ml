@@ -11,7 +11,8 @@ let%expect_test _ =
     else Case2
   in
   print_s [%sexp (partition_enum list ~f : char list * char list * char list)];
-  [%expect {|
+  [%expect
+    {|
     ((9 6 0)
      (8 4 1)
      (p p p p))
@@ -28,7 +29,8 @@ let%expect_test _ =
     else Case2
   in
   print_s [%sexp (partition_enumi list ~f : char list * char list * char list)];
-  [%expect {|
+  [%expect
+    {|
     ((9 4)
      (8 6 1 0)
      (p p p p))
@@ -47,7 +49,8 @@ let%expect_test _ =
     else Case2 char
   in
   print_s [%sexp (partition_map list ~f : int list * int list * char list)];
-  [%expect {|
+  [%expect
+    {|
     ((90 60 0)
      (85 45 15)
      (p p p p))
@@ -66,7 +69,8 @@ let%expect_test _ =
     else Case2 char
   in
   print_s [%sexp (partition_mapi list ~f : int list * int list * char list)];
-  [%expect {|
+  [%expect
+    {|
     ((90 40)
      (85 65 15 5)
      (p  p  p  p))
@@ -79,8 +83,9 @@ let%expect_test _ =
   print_s
     [%sexp
       (unzip [ 3, 2, 1; 1, 7, 6; 4, 1, 1; 1, 8, 8; 5, 2, 0; 9, 8, 3 ]
-        : int list * int list * int list)];
-  [%expect {|
+       : int list * int list * int list)];
+  [%expect
+    {|
     ((3 1 4 1 5 9)
      (2 7 1 8 2 8)
      (1 6 1 8 0 3))
@@ -122,7 +127,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (Or_error.try_with (fun () -> zip_exn list1 list2 list3)
-          : (int * int * int) list Or_error.t)]
+         : (int * int * int) list Or_error.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -168,7 +173,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (map list1 list2 list3 ~f:print_return_triple
-          : (int * int * int) list List.Or_unequal_lengths.t)]
+         : (int * int * int) list List.Or_unequal_lengths.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -204,7 +209,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (Or_error.try_with (fun () -> map_exn list1 list2 list3 ~f:print_return_triple)
-          : (int * int * int) list Or_error.t)]
+         : (int * int * int) list Or_error.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -255,7 +260,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (mapi list1 list2 list3 ~f:print_return_itriple
-          : (int * int * int * int) list List.Or_unequal_lengths.t)]
+         : (int * int * int * int) list List.Or_unequal_lengths.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -291,7 +296,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (Or_error.try_with (fun () -> mapi_exn list1 list2 list3 ~f:print_return_itriple)
-          : (int * int * int * int) list Or_error.t)]
+         : (int * int * int * int) list Or_error.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -370,7 +375,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (Or_error.try_with (fun () -> iter_exn list1 list2 list3 ~f:print_triple)
-          : unit Or_error.t)]
+         : unit Or_error.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];
@@ -443,7 +448,7 @@ let%expect_test _ =
     print_s
       [%sexp
         (Or_error.try_with (fun () -> iteri_exn list1 list2 list3 ~f:print_itriple)
-          : unit Or_error.t)]
+         : unit Or_error.t)]
   in
   test [] [] [];
   [%expect {| (Ok ()) |}];

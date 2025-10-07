@@ -11,7 +11,8 @@ let to_int = N_ary.Enum3.to_int
 
 let%expect_test _ =
   List.iter all ~f:(fun t -> print_s [%sexp (t : t), (to_int t : int)]);
-  [%expect {|
+  [%expect
+    {|
     (Case0 0)
     (Case1 1)
     (Case2 2)
@@ -24,7 +25,8 @@ let%expect_test _ =
   for i = -1 to 2 do
     print_s [%sexp (i : int), (of_int i : t option)]
   done;
-  [%expect {|
+  [%expect
+    {|
     (-1 ())
     (0 (Case0))
     (1 (Case1))

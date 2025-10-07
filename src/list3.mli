@@ -6,8 +6,8 @@ open! Base
 
 (** {2 Partitioning Lists}
 
-    These functions produce many lists from one by assigning each result
-    from the input to one of 3 buckets. *)
+    These functions produce many lists from one by assigning each result from the input to
+    one of 3 buckets. *)
 
 (** Transforms an input list into a tuple of lists. The Nth list is the elements of the
     input for which [f] returns [CaseN], in the order they occur in the input. *)
@@ -16,9 +16,9 @@ val partition_enum : 'a list -> f:('a -> Enum3.t) -> 'a list * 'a list * 'a list
 (** Like [partition_enum]. [f] is also passed the index of the current list item. *)
 val partition_enumi : 'a list -> f:(int -> 'a -> Enum3.t) -> 'a list * 'a list * 'a list
 
-(** Transforms an input list into a tuple of lists. [f] is applied to every element of
-    the input. For every result of the form [CaseN x], the Nth output list contains [x]
-    in the same order that the inputs occurred. *)
+(** Transforms an input list into a tuple of lists. [f] is applied to every element of the
+    input. For every result of the form [CaseN x], the Nth output list contains [x] in the
+    same order that the inputs occurred. *)
 val partition_map
   :  'a list
   -> f:('a -> ('b0, 'b1, 'b2) Variant3.t)
@@ -32,8 +32,8 @@ val partition_mapi
 
 (** {2 Unzipping Lists}
 
-    These functions produces many lists from one by taking each part from a tuple
-    into a separate list. *)
+    These functions produces many lists from one by taking each part from a tuple into a
+    separate list. *)
 
 (** Transform a list of 3-tuples into a tuple of lists. *)
 val unzip : ('a0 * 'a1 * 'a2) list -> 'a0 list * 'a1 list * 'a2 list
@@ -45,10 +45,10 @@ val unzip : ('a0 * 'a1 * 'a2) list -> 'a0 list * 'a1 list * 'a2 list
 
 (** {3 Returning Unequal Lengths}
 
-    These functions detect unequal lengths before they begin processing list elements,
-    and return either [Ok _] or [Unequal_lengths]. *)
+    These functions detect unequal lengths before they begin processing list elements, and
+    return either [Ok _] or [Unequal_lengths]. *)
 
-(** Transform 3 lists of equal length into a single list of 3-tuples.  Returns
+(** Transform 3 lists of equal length into a single list of 3-tuples. Returns
     [Unequal_lengths] if the input lists don't all have the same length. *)
 val zip
   :  'a0 list
@@ -56,8 +56,8 @@ val zip
   -> 'a2 list
   -> ('a0 * 'a1 * 'a2) list List.Or_unequal_lengths.t
 
-(** Map a function over 3 lists simultaneously. If the input lists don't all have the
-    same length, returns [Unequal_lengths] without calling [f] on any elements. *)
+(** Map a function over 3 lists simultaneously. If the input lists don't all have the same
+    length, returns [Unequal_lengths] without calling [f] on any elements. *)
 val map
   :  'a0 list
   -> 'a1 list
@@ -89,14 +89,14 @@ val iteri
   -> f:(int -> 'a0 -> 'a1 -> 'a2 -> unit)
   -> unit List.Or_unequal_lengths.t
 
-(** Returns [Ok ()] if the input lists all have the same length. Returns
-    [Unequal_lengths] otherwise. *)
+(** Returns [Ok ()] if the input lists all have the same length. Returns [Unequal_lengths]
+    otherwise. *)
 val check_equal_lengths : _ list -> _ list -> _ list -> unit List.Or_unequal_lengths.t
 
 (** {3 Raising on Unequal Lengths}
 
-    These functions begin processing list elements immediately. If one or more lists
-    end before the others, they raise an exception. *)
+    These functions begin processing list elements immediately. If one or more lists end
+    before the others, they raise an exception. *)
 
 (** Like [zip], but raises if the input lists don't all have the same length. *)
 val zip_exn : 'a0 list -> 'a1 list -> 'a2 list -> ('a0 * 'a1 * 'a2) list
@@ -113,8 +113,8 @@ val mapi_exn
   -> f:(int -> 'a0 -> 'a1 -> 'a2 -> 'b)
   -> 'b list
 
-(** Like [iter]. Raises if the input lists don't all have the same length.
-    May call [f] before raising. *)
+(** Like [iter]. Raises if the input lists don't all have the same length. May call [f]
+    before raising. *)
 val iter_exn : 'a0 list -> 'a1 list -> 'a2 list -> f:('a0 -> 'a1 -> 'a2 -> unit) -> unit
 
 (** Like [iter_exn]. [f] is also passed the index of the current list item. *)
