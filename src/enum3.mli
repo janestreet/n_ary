@@ -10,7 +10,7 @@ type t =
   | Case0
   | Case1
   | Case2
-[@@deriving compare, enumerate, equal, hash, sexp_of]
+[@@deriving compare ~localize, enumerate, equal ~localize, hash, sexp_of]
 
 (** Constants *)
 

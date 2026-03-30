@@ -2,7 +2,7 @@ open! Base
 open Expect_test_helpers_base
 
 type ('a, 'b, 'c) t = ('a, 'b, 'c) N_ary.Tuple3.t
-[@@deriving compare, equal, hash, sexp_of]
+[@@deriving compare ~localize, equal ~localize, hash, sexp_of]
 
 let create = N_ary.Tuple3.create
 

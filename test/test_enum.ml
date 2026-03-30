@@ -5,7 +5,7 @@ type t = N_ary.Enum3.t =
   | Case0
   | Case1
   | Case2
-[@@deriving compare, enumerate, equal, hash, sexp_of]
+[@@deriving compare ~localize, enumerate, equal ~localize, hash, sexp_of]
 
 let to_int = N_ary.Enum3.to_int
 
