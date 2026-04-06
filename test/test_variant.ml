@@ -5,7 +5,7 @@ type ('a, 'b, 'c) t = ('a, 'b, 'c) N_ary.Variant3.t =
   | Case0 of 'a
   | Case1 of 'b
   | Case2 of 'c
-[@@deriving compare, equal, hash, sexp_of]
+[@@deriving compare ~localize, equal ~localize, hash, sexp_of]
 
 let case0 = N_ary.Variant3.case0
 

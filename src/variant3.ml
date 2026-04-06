@@ -6,7 +6,7 @@ type ('a0, 'a1, 'a2) t =
   | Case0 of 'a0
   | Case1 of 'a1
   | Case2 of 'a2
-[@@deriving compare, equal, hash, sexp_of]
+[@@deriving compare ~localize, equal ~localize, hash, sexp_of]
 
 (* constructors *)
 

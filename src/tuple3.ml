@@ -2,7 +2,8 @@
 
 open! Base
 
-type ('a0, 'a1, 'a2) t = 'a0 * 'a1 * 'a2 [@@deriving compare, equal, hash, sexp_of]
+type ('a0, 'a1, 'a2) t = 'a0 * 'a1 * 'a2
+[@@deriving compare ~localize, equal ~localize, hash, sexp_of]
 
 (* constructor *)
 
