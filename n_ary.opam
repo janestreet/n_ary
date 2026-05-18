@@ -13,7 +13,7 @@ build: [
 depends: [
   "ocaml" {>= "5.1.0"}
   "base"
-  "expect_test_helpers_core"
+  "expect_test_helpers_base"
   "ppx_compare"
   "ppx_enumerate"
   "ppx_hash"
@@ -22,7 +22,7 @@ depends: [
   "ppx_sexp_message"
   "dune"                     {>= "3.17.0"}
 ]
-available: arch != "arm32" & arch != "x86_32"
+available: arch != "x86_32"
 synopsis: "A library for N-ary datatypes and operations."
 description: "
 
